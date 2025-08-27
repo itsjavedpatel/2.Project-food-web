@@ -88,7 +88,7 @@
 
 - Whenever state variable changes, React re-renders the component
 
-# - useEffect(()=>{},[]):- useEffect is a React Hook that lets you synchronize a component with an external system.
+# useEffect(()=>{},[]):- useEffect is a React Hook that lets you synchronize a component with an external system.
 
 - - 1. It takes two arguments, first is callback function and second is dependency array(optional).
 - - 2. useEffect callback func is called as soon as our component render cycle completed.
