@@ -74,7 +74,9 @@
 - Written by FB developer
 - Example:- useState(), useContext(),useEffect() etc.
 
-# - useState():- used to create local state variables inside our functional component in react
+# useState():-
+
+- used to create local state variables inside our functional component in react
 
 - - 1. import {useState} from react.
 - - 2. const [state,setState]=useState(initialState);
