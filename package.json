@@ -1,0 +1,31 @@
+{
+  "name": "5.scripts-to-run",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsjavedpatel/learn-react.git"
+  },
+  "author": "Javed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsjavedpatel/learn-react/issues"
+  },
+  "homepage": "https://github.com/itsjavedpatel/learn-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "tailwindcss": "^4.1.12"
+  }
+}
