@@ -329,7 +329,6 @@
 /* Style for error page */
 .error-container {
   display: flex;
-  animation: errorFadeIn 1s ease;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -338,8 +337,5 @@
   gap: 20px;
   color: #ff3c00;
   font-size: 1.5rem;
-  background: linear-gradient(90deg, #fff6e6 0%, #ffe0cc 100%);
-  border-radius: 15px;
-  box-shadow: 0 2px 16px rgba(255, 99, 51, 0.08);
-  padding: 40px 20px;
+  background: linear-gradient(90deg, #fff6e6 0%, #c17e7eda 100%);
 }

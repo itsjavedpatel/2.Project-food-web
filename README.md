@@ -88,7 +88,9 @@
 
 - Whenever state variable changes, React re-renders the component
 
-# useEffect(()=>{},[]):- useEffect is a React Hook that lets you synchronize a component with an external system.
+# useEffect(()=>{},[]):-
+
+- useEffect is a React Hook that lets you synchronize a component with an external system.
 
 - - 1. It takes two arguments, first is callback function and second is dependency array(optional).
 - - 2. useEffect callback func is called as soon as our component render cycle completed.
@@ -261,4 +263,15 @@
 
 # Higher order component
 
-- higher order component is a function that takes a component and returns a component
+- Higher order component(HOC) is a function that takes a component and returns a component
+
+# Controlled Component Vs Uncontrolled Components
+
+- Controlled Components: Components which are controlled by their parent not by themselves.
+- Uncontrolled Components: Copmonents which are not controlled by their parent.
+
+# Lifting state Up
+
+- Lifting state up means moving the state from a child component to a common parent component so that multiple child components can share and synchronize the same state
+
+- Example like in accordian we want to collapse all other components when one of their sibling is expanded.

@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurentCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurentCard";
 
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -22,13 +22,15 @@ const Body = () => {
         throw new Error("Network response was not ok");
       }
       const jsonData = await response.json();
-      // console.log(jsonData);
+      console.log(jsonData);
       // Optional chaining to safely access nested properties
       // Extracting the list of restaurants from the JSON data
       const restaurants =
+        jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
         jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
-      // console.log(restaurants);
+      console.log(restaurants);
       // console.log(jsonData);
       setTimeout(() => {
         restaurants ? setListOfRes(restaurants) : "";
@@ -47,6 +49,7 @@ const Body = () => {
   if (filteredRes.length == 0) {
     return <Shimmer />;
   }
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   return (
     <div className="restaurant-container sm:w-full !sm:mx-0 ">
@@ -100,7 +103,11 @@ const Body = () => {
             key={restaurent.info.id}
             className="card-link"
           >
-            <RestaurantCard resObj={restaurent} />
+            {restaurent.info.promoted ? (
+              <RestaurantCardPromoted resObj={restaurent} />
+            ) : (
+              <RestaurantCard resObj={restaurent} />
+            )}
           </Link>
         ))}
       </div>
