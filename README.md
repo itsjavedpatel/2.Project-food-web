@@ -275,3 +275,17 @@
 - Lifting state up means moving the state from a child component to a common parent component so that multiple child components can share and synchronize the same state
 
 - Example like in accordian we want to collapse all other components when one of their sibling is expanded.
+
+# CONTEXT API
+
+- The Context API is a built-in feature in React used to share data between multiple components without passing props manually at every level.
+
+- When we have deeply nested components, we often need to pass data through multiple layers → called prop drilling.so to avoid this we use context api.
+
+- Context API solves this by providing a global state that can be accessed anywhere in the component tree.
+
+# Steps to use Context Api
+
+- Step 1 → Create a context object.
+- Step 2 → Wrap your components with a Provider and pass data in value.
+- Step 3 → Consume the data using useContext anywhere inside the Provider.

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import useRestrauntMenu from "../utils/useRestrauntMenu";
 import RestaurantCategory from "./RestaurantCategory";
 const RestaurentMenu = () => {
-  const [showIndex, setShowIndex] = useState(null);
+  const [showIndex, setShowIndex] = useState(0);
   const { resId } = useParams();
   const resInfo = useRestrauntMenu(resId);
   if (resInfo === null) {
@@ -23,9 +23,9 @@ const RestaurentMenu = () => {
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  console.log(categories);
+  // console.log(categories);
   return (
-    <div className="flex flex-col items-center text-center gap-1">
+    <div className="flex flex-col items-center text-center gap-4">
       <h1 className="font-bold text-lg sm:text-2xl my-6">{name}</h1>
       <p className="font-semibold text-sm sm:text-lg my-2">
         {cuisines.join(", ")} - {costForTwoMessage} - {avgRating}⭐{" "}
@@ -35,7 +35,7 @@ const RestaurentMenu = () => {
           key={category?.card?.card?.categoryId}
           data={category?.card?.card}
           isOpen={index === showIndex ? true : false}
-          setShowIndex={() => setShowIndex(index)}
+          setShowIndex={() => setShowIndex(showIndex === index ? null : index)}
         />
       ))}
     </div>
